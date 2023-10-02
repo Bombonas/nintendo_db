@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'app_data.dart';
-import 
-
-class LayoutMobileScreen2 extends StatefulWidget {
+import 'layout_personatge.dart';class LayoutMobileScreen2 extends StatefulWidget {
 
     final String seccio;
     final int index;
@@ -36,7 +34,7 @@ class _StateLayoutMobileScreen2 extends State<LayoutMobileScreen2> {
         } else {
             return Scaffold(
                 appBar: AppBar(
-                    backgroundColor: Color.red,
+                    backgroundColor: Colors.red,
                     title: Text(itemData['nom']),
                     leading: IconButton(
                         icon: const Icon(Icons.arrow_back),

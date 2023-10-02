@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
-class LayoutPersonatge extends StatelessWidget {
+class LayoutConsola extends StatelessWidget{
     final dynamic itemData;
 
-    // Relacionar els colors amb el text que els defineix
     final Map<String, Color> colorMap = {
         'red': Colors.red,
         'blue': Colors.blue,
@@ -13,15 +12,14 @@ class LayoutPersonatge extends StatelessWidget {
         'grey': Colors.grey,
     };
 
-    // Constructor
-    LayoutPersonatge({Key? key, required this.itemData}) : super(key: key);
+    LayoutConsola({Key? key, required this.itemData}) : super(key: key);
 
     // Retornar un 'Color' a partir del text, fent servir el mapa de colors anterior
     Color getColorFromString(String colorString) {
         return colorMap[colorString.toLowerCase()] ?? Colors.black;
     }
 
-	@override
+    @override
     Widget build(BuildContext context) {
         return SingleChildScrollView(
             child: Column(
