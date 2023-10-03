@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'layout_mobile_screen_0.dart';
+import 'layout_desktop.dart';
 
 // Crear el widget principal 'App' de tipus 'stateful'
 class App extends StatefulWidget {
@@ -13,9 +14,14 @@ class App extends StatefulWidget {
 class AppState extends State<App> {
     // Definir la funció que escull el 'layout' a mostrar
     Widget _setLayout(BuildContext context) {
-        // Aquí, més endavant escollirem mòbil o desktop
+      double width = MediaQuery.of(context).size.width;
+      if (width >= 600) {
+        return const LayoutDesktop();
+      } else {
         return const LayoutMobileScreen0();
+      }
     }
+
 
     // Definir el contingut del widget 'App'
     @override

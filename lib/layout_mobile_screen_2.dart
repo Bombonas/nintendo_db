@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'app_data.dart';
-import 'layout_personatge.dart';class LayoutMobileScreen2 extends StatefulWidget {
+import 'layout_personatge.dart';
+import 'layout_consoles.dart';
+import 'layout_video_joc.dart';
+class LayoutMobileScreen2 extends StatefulWidget {
 
     final String seccio;
     final int index;
@@ -18,6 +21,8 @@ class _StateLayoutMobileScreen2 extends State<LayoutMobileScreen2> {
     Widget _setBody(BuildContext context, dynamic itemData) {
         switch (widget.seccio) {
             case 'Personatges': return LayoutPersonatge(itemData: itemData);
+            case 'Consoles': return LayoutConsola(itemData: itemData);
+            case 'Jocs': return LayoutVideoJoc(itemData: itemData);
         }
         return Text('Unknown layout: ${widget.seccio}');
     }
